@@ -1,0 +1,94 @@
+body {
+  background-color: #415a59;
+}
+.collapsible {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  padding: 20px 20px 15px 20px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 18px;
+  border: 2px solid rgb(250, 250, 250);
+}
+.chapters {
+  background-color: white;
+  cursor: pointer;
+  color: black;
+  padding: 30px 20px 20px 50px;
+  font-size: 18px;
+  text-align: left;
+}
+.chapters:hover{
+  color: #00a353;
+}
+.lists {
+  width: 80%;
+  margin: 0 auto;
+  padding-left: 0px;
+}
+
+.active,
+.collapsible:hover {
+  background-color: #00a353;
+  color: white !important;
+}
+.collapsible:after {
+  content: "\02795"; /* Unicode character for "plus" sign (+) */
+  font-size: 15px;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+.content {
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+.chapter-item {
+  list-style-type: none;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  transition: all 0.25s ease-in 0s;
+}
+.expanded {
+  width: 100%;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  box-shadow: rgb(187 187 187) 0px 16px 26px 5px;
+  transition: all 0.25s ease-out 0s;
+}
+.heading {
+  text-align: center;
+  margin-bottom: 10px;
+  color: white
+}
+.completion-status {
+  margin-left: 50px;
+  color: green;
+}
+.collapsible:hover   > .completion-status {
+    margin-left: 50px;
+    color: white;
+}
+.active  > .completion-status {
+  margin-left: 50px;
+  color: white;
+}
+.status{
+  float: right;
+  color: #00a353;
+  ;
+}
+
+.loader{
+  text-align:center;
+}
